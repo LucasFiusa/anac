@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="music">
-        <audio src="./music.mp3" autoplay loop></audio>
+        <audio id="bg-music" src="./music.mp3" autoplay loop muted></audio>
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1DLKuppSYytOuxhtI6KBGu?utm_source=generator&theme=0" width="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 
@@ -66,5 +66,13 @@
         <i class="fa-solid fa-heart"></i>
         <i class="fa-solid fa-heart"></i>
       </h1>
+
+      <script>
+        window.addEventListener('click', () => {
+          const audio = document.getElementById('bg-music');
+          audio.muted = false;
+          audio.play();
+        });
+      </script>
 </body>
 </html>
