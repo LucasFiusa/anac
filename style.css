@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: #ddd;
+}
+
+body{
+    background-color: #1c3d5a;
+}
+
+#music{
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 75vw;
+    height: 120px;
+}
+
+  .carrossel-container {
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid #8b8b8b;
+    overflow: hidden;
+    height: auto; /* ajuste conforme o tamanho das suas imagens */
+    position: relative;
+  }
+  
+  .carrossel {
+    display: flex;
+    height: 65vh;
+    width: calc(100% * 33.1); /* 15 imagens + 15 duplicadas */
+    animation: deslizar 75s linear infinite;
+  }
+  
+  .carrossel img {
+    width: calc(100% / 20); /* distribui as 15 imagens visíveis */
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes deslizar {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  #title{
+    font-family: "Comic Relief", system-ui;
+    font-size: 1rem;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
